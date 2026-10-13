@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b3f">
+  <meta name="description" content="Student event, profile and FAQ dashboard demonstrating the JavaScript Fetch API.">
+  <title>CampusHub | Practical 6 - Fetch API</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="CampusHub home"><span class="brand-mark">C</span><span>campus<span class="brand-light">hub</span></span></a>
+      <div class="header-tag">WEB DEVELOPMENT &amp; FRAMEWORKS <span class="tag-dot"></span> PRACTICAL 06</div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR CAMPUS, IN ONE PLACE</p>
+        <h1 id="page-title">Discover what’s<br><span>happening on campus.</span></h1>
+        <p class="hero-description">Explore student events, meet the community, and find quick answers. All powered by the Fetch API and dynamic JSON data.</p>
+        <a class="hero-link" href="#events">Explore events <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="visual-card visual-card-main"><span class="visual-icon">✦</span><span class="visual-label">CAMPUS LIFE</span><strong>Learn.<br>Connect.<br>Grow.</strong><span class="visual-caption">Your next chapter starts here.</span></div>
+        <div class="floating-note note-top"><span class="note-icon">↗</span><span><b>Stay curious</b><small>Find your next event</small></span></div>
+        <div class="floating-note note-bottom"><span class="avatar-stack"><i>A</i><i>S</i><i>J</i></span><span><b>Student community</b><small>Made for campus life</small></span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / EVENT DISCOVERY</span><span class="hero-bottom-line"></span><span>BUILT WITH JAVASCRIPT</span></div>
+    </section>
+
+    <section class="section events-section" id="events" aria-labelledby="events-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">WHAT’S ON</p><h2 id="events-title">Campus events<span class="heading-period">.</span></h2><p class="section-description">Find workshops, competitions, talks and more.</p></div>
+        <span class="section-index">01 <span>/ 03</span></span>
+      </div>
+      <div class="controls" aria-label="Event search and filters">
+        <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Search events</span><input type="search" id="searchInput" placeholder="Search events, topics…" autocomplete="off"></label>
+        <label class="select-wrap"><span class="sr-only">Filter by category</span><select id="categoryFilter"><option value="all">All categories</option></select><span aria-hidden="true">⌄</span></label>
+        <label class="select-wrap sort-wrap"><span class="sr-only">Sort events</span><select id="sortSelect"><option value="default">Sort by: Default</option><option value="titleAsc">Title A–Z</option><option value="titleDesc">Title Z–A</option><option value="dateAsc">Date: Oldest first</option><option value="dateDesc">Date: Newest first</option></select><span aria-hidden="true">⌄</span></label>
+      </div>
+      <div id="loading" class="status-panel"><span class="loader" aria-hidden="true"></span> Loading events…</div>
+      <div id="error" class="error-panel" role="alert"></div>
+      <div id="eventContainer" class="card-container" aria-live="polite"></div>
+      <div id="pagination" class="pagination" aria-label="Event pages"></div>
+    </section>
+
+    <section class="section students-section" aria-labelledby="students-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE PEOPLE</p><h2 id="students-title">Meet the community<span class="heading-period">.</span></h2><p class="section-description">A snapshot of the talented people around campus.</p></div>
+        <span class="section-index">02 <span>/ 03</span></span>
+      </div>
+      <div id="studentContainer" class="card-container student-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">QUICK KNOWLEDGE</p><h2 id="faq-title">Frequently asked questions<span class="heading-period">.</span></h2><p class="section-description">A few useful answers about the technology behind this page.</p></div>
+        <span class="section-index">03 <span>/ 03</span></span>
+      </div>
+      <div id="faqContainer" class="faq-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">C</span><span>campus<span class="brand-light">hub</span></span></a><p>Built to explore. Powered by the Fetch API.</p><span class="footer-practical">PRACTICAL 06 <span>·</span> WEB DEVELOPMENT</span></div></footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
